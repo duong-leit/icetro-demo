@@ -11,7 +11,8 @@ $alternative-font-family : 'Montserrat', sans-serif;
     font-family: $main-font-family;
 }
 body {
-    margin: auto;
+    position: relative;
+    margin: 0 auto;
     width: 1440px;
     max-width: 1440px;
 }
@@ -25,4 +26,8 @@ body {
     left: $left;
     top: $top;
     position: absolute;
+}
+@mixin rechange-pos($left, $top) {
+    left: $left;
+    top: $top;
 }

@@ -249,7 +249,8 @@ body {
   position: relative;
   margin-bottom: 137px;
   background: #4762fc;
-  background-image: url("/public/img/Pattern.png"); }
+  background-image: url("/public/img/Pattern.png");
+  background-repeat: no-repeat; }
   .dipenser__left-side {
     margin: 66px 12px 57px 202px;
     width: 508px;
@@ -619,15 +620,25 @@ body {
     width: 375px;
     max-width: 375px; }
   .hero {
-    height: 816px;
-    max-height: 816px;
-    width: 100%; }
-    .hero__bg > img:first-child {
-      top: unset;
-      bottom: -90px; }
-    .hero__bg > img:last-child {
-      bottom: -163.17px;
-      height: 375px; }
+    height: 961px;
+    max-height: 961px;
+    width: 100%;
+    overflow: hidden visible; }
+    .hero__bg {
+      width: 375px;
+      overflow: hidden;
+      background-color: #4762FC; }
+      .hero__bg > img:first-child {
+        top: unset;
+        bottom: 0;
+        overflow: hidden;
+        background-size: cover;
+        height: 1100px;
+        width: 1650px; }
+      .hero__bg > img:last-child {
+        bottom: -110.17px;
+        height: 500px;
+        overflow: hidden; }
     .hero__navbar {
       max-height: 84px;
       height: 84px; }
@@ -677,14 +688,15 @@ body {
           color: #fff; }
     .hero__footer {
       top: unset;
-      bottom: -30px;
-      margin: 0;
+      bottom: 0;
+      margin: 0 0 44px 0;
       font-weight: 700;
       font-size: 23px;
       line-height: 31px;
       color: #043C9C;
-      letter-spacing: 1px;
-      padding: 0; }
+      padding: 0;
+      width: 370px;
+      height: 71px; }
     .hero__flexImage > img {
       position: absolute; }
       .hero__flexImage > img:first-child {
@@ -692,17 +704,89 @@ body {
         left: 42px;
         width: 324.16px;
         height: 342.27px; }
-      .hero__flexImage > img:nth-child(2), .hero__flexImage > img:nth-child(3) {
+      .hero__flexImage > img:nth-child(2), .hero__flexImage > img:nth-child(3), .hero__flexImage > img:nth-child(5) {
         display: none; }
       .hero__flexImage > img:nth-child(4) {
+        position: absolute;
         width: 87px;
         height: 75px;
         left: 300px;
         top: 924px; }
-      .hero__flexImage > img:nth-child(5) {
-        display: none; }
       .hero__flexImage > img:last-child {
         top: 705px;
         right: -43px;
         width: 194.5px;
-        height: 107.47px; } }
+        height: 107.47px;
+        overflow: hidden; }
+  .make-ice {
+    width: 100%;
+    height: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    margin-top: 66px;
+    margin-bottom: 272px;
+    padding-top: 0px; }
+    .make-ice__left-side {
+      width: 343px;
+      height: 270px; }
+      .make-ice__left-side img {
+        width: 100%;
+        height: 100%; }
+    .make-ice__right-side {
+      position: relative;
+      width: 343px;
+      height: 420px;
+      max-height: 420px;
+      margin: 27px 16px 0 16px; }
+      .make-ice__right-side h2 {
+        height: 31px;
+        padding-right: 40px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: #043C9C; }
+    .make-ice__paragraph {
+      margin-top: 11px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #5C7392; }
+      .make-ice__paragraph li {
+        list-style-type: "-";
+        padding-left: 5px;
+        margin-left: 5px; }
+    .make-ice__heading {
+      margin: 34px 40px 34px 0px;
+      height: 24px;
+      width: 468px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #043C9C; }
+    .make-ice__list-item {
+      margin-left: 15px; }
+  .dipenser {
+    height: 843px;
+    flex-direction: column-reverse;
+    margin-bottom: 0px;
+    background-size: auto 625px; }
+    .dipenser__right-side {
+      max-width: 328px;
+      height: 325px;
+      margin-top: 0;
+      top: -169px; }
+      .dipenser__right-side > img:first-child {
+        left: 47px;
+        width: 240px;
+        height: 318px; }
+      .dipenser__right-side > img:nth-child(2) {
+        transform: scale(53px, 23px);
+        left: unset;
+        top: 100px;
+        right: -10px; }
+      .dipenser__right-side > img:last-child {
+        width: 89px;
+        height: 92px;
+        right: 34px;
+        top: 169px; } }

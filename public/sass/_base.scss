@@ -1,0 +1,28 @@
+$white-color : #fff;
+$blue-color: #043C9C;
+$btn-color: #3956FB;
+$paragraph-color: #5C7392;
+$main-font-family : 'Prompt', sans-serif;
+$alternative-font-family : 'Montserrat', sans-serif;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $main-font-family;
+}
+body {
+    margin: auto;
+    width: 1440px;
+    max-width: 1440px;
+}
+@mixin font($font-weight, $font-size, $line-height, $color) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin flex-img($left, $top) {
+    left: $left;
+    top: $top;
+    position: absolute;
+}

@@ -260,6 +260,7 @@
       @include font(700, 54px, 68px, $white-color);
     }
     div {
+      width: 100%;
       &:nth-child(2) {
         li {
           list-style-type: "-";
@@ -277,12 +278,16 @@
       }
     }
     button {
+      width: 214px;
+      height: 56px;
       display: flex;
       flex-direction: row;
       align-items: center;
       margin-top: 30px;
       padding: 16px 44px;
+      border: inherit;
       border-radius: 10px;
+      @include font(500, 18px, 48px, $btn-color);
     }
   }
   &__right-side {
@@ -296,9 +301,6 @@
         @include flex-img(0, 0);
         width: 597px;
         height: 630px;
-      }
-      &:nth-child(2) {
-        @include flex-img(534px, 378px);
       }
       &:last-child {
         @include flex-img(452px, 482px);
@@ -315,7 +317,6 @@
   }
 }
 .flake-ice {
-  margin-top: 137px;
   margin: 137px 0 24px;
   display: flex;
   flex-direction: row;
@@ -326,10 +327,6 @@
     margin: 90px 79px 24px 0;
     background-image: url("/public/img/flake-ice.png");
     img {
-      &:first-child {
-        @include flex-img(695px, 387px);
-        color: $white-color;
-      }
       &:last-child {
         @include flex-img(623px, 467px);
         border: 10px solid $white-color;
@@ -392,16 +389,18 @@
   display: block;
   height: 626px;
   background-image: url("/public/img/make_ice_vid.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   padding: 134px auto 0;
   justify-content: space-evenly;
   align-items: center;
+  opacity: 0.9;
   &__heading {
     text-align: center;
     max-width: 920px;
     min-height: 82px;
-    min-width: none;
     h2 {
       @include font(bold, 32px, 41px, $white-color);
     }
@@ -431,6 +430,7 @@
   align-items: center;
   justify-content: space-between;
   h2 {
+    text-align: center;
     width: 328px;
     height: 62px;
     @include font(700,24px,31px,$blue-color)
@@ -441,14 +441,13 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      height: 88px;
+      // height: auto;
   }
   }
 }
 
 .comments {
-  height: 511px;
-  max-height: 511px;
+  min-height: 511px;
   background-color: #F3FAFF;
   position: relative;
   padding-top: 64px;
@@ -462,9 +461,10 @@
   }
   .comment{
     text-align: center;
+    margin: 14px 208px;
     &__content {
-      margin: 14px 208px;
       letter-spacing: 0.1px;
+      font-family: Mulish, sans-serif;
       @include font(400,21px, 32px, $paragraph-color)
     }
     .placeholder {
@@ -527,8 +527,6 @@
   .footer-offers {
       label {
         @include font(700,32px, 48.38px,  $white-color);
-        width: 339px;
-        height: 48px;
         margin-bottom: 25px;
       }
       div {
@@ -538,11 +536,9 @@
         margin-bottom: 48px;
         input[type="text"] {
           background-color: rgba(255,255,255,0.3);
-          @include font(400, 18px, 26px,  rbga(255,255,255,0.8));
+          @include font(400, 18px, 26px,  $white-color);
           border: 0px solid;
           border-radius: 9px;
-          position: absolute;
-          color: $white-color;
           opacity: 0.8;
           &::placeholder {
             color: $white-color;
@@ -551,6 +547,7 @@
           &:focus {
             outline: none;
           }
+          position: absolute;
           top: 0;
           left: 0;
           width: 100%;
@@ -566,6 +563,7 @@
           opacity: 1;
           color: $btn-color;
           letter-spacing: 2px;
+          text-transform: uppercase;
           @include font(800, 18px, 18px,  $btn-color);
         }
       }
@@ -590,7 +588,8 @@
     height: 23px;
     letter-spacing: 1px;
     text-align: center;
-    @include flex-img(1119px,487px);
+    float: right;
+    // @include flex-img(1119px,487px);
     > div {
       &:first-child {
         font-family: 'Mulish', sans-serif;
@@ -612,200 +611,3 @@
   }
 }
 
-@media only screen and (max-width: 376px) {
-  body {
-    width: 375px;
-    max-width: 375px;
-  }
-  .hero {
-    height: 961px;
-    max-height: 961px;
-    width: 100%;
-    overflow: hidden visible;
-    &__bg {
-      width: 375px;
-      overflow: hidden;
-      background-color: #4762FC;
-      > img {
-        &:first-child {
-          top: unset;
-          bottom: 0;
-          overflow: hidden;
-          background-size: cover;
-          height: 1100px;
-          width: 1650px;
-        }
-        &:last-child {
-          bottom: -110.17px;
-          height: 500px;
-          overflow: hidden;
-        }
-      }
-    }
-    &__navbar {
-      max-height: 84px;
-      height: 84px;
-      .logo {
-        @include rechange-pos(4.27%, 23.81%);
-        height: 44px;
-        width: 61px;
-      }
-      .navbar-btn {
-        @include rechange-pos(54.67%,26.19%);
-        
-        min-width: 154px;
-        height: 42px;
-        max-height: 42px;
-        padding: 12px 16px 12px 18px;
-        @include font(600, 14px, 21px, $btn-color);
-      }
-    }
-    &__content {
-      @include flex-img(15px, 127px);
-      width: 343px;
-      max-width: 343px;
-      color: $white-color;
-      > div {
-        &:first-child {
-          @include font(700, 24px, 32px, #FDFDFD);
-        }
-        &:nth-child(2) {
-          padding-top: 16px;
-          width: 100%;
-          @include font(400, 14px, 21px, $white-color);
-        }
-        &:nth-child(3) {
-          margin-top: 34px;
-          > div {
-            &:last-child {
-              margin-left: 15px;
-            }
-            li {
-              &:first-child {
-                @include font(700, 24px, 30px, $white-color);
-              }
-            }
-          }
-        }
-      }
-    }
-    &__footer {
-      top: unset;
-      bottom: 0;
-      margin: 0 0 44px 0;
-      @include font(700, 23px, 31px, $blue-color);
-      padding: 0;
-      width: 370px;
-      height: 71px;
-    }
-    &__flexImage {
-      > img {
-        position: absolute;
-        &:first-child {
-          top: 416px;
-          left: 42px;
-          width: 324.16px;
-          height: 342.27px;
-        }
-        &:nth-child(2),&:nth-child(3),&:nth-child(5) {
-          display: none;
-        }
-        &:nth-child(4) {
-          position: absolute;
-          width: 87px;
-          height: 75px;
-          left: 300px;
-          top: 924px;
-        }
-        &:last-child {
-          top: 705px;
-          right: -43px;
-          width: 194.5px;
-          height: 107.47px;
-          overflow: hidden;
-        }
-      }
-    }
-  }
-  .make-ice {
-    width: 100%;
-    height: 820px;
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    margin-top: 66px;
-    margin-bottom: 272px;
-    padding-top: 0px;
-    &__left-side {
-      width: 343px;
-      height: 270px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &__right-side {
-      position: relative;
-      width: 343px;
-      height: 420px;
-      max-height: 420px;
-      margin: 27px 16px 0 16px;
-      h2 {
-        height: 31px;
-        padding-right: 40px;
-        @include font(700, 24px, 31px, $blue-color);
-      }
-    }
-    &__paragraph {
-      margin-top: 11px;
-      @include font(400, 14px, 21px, $paragraph-color);
-      li {
-        list-style-type: "-";
-        padding-left: 5px;
-        margin-left: 5px;
-      }
-    }
-    &__heading {
-      margin: 34px 40px 34px 0px;
-      height: 24px;
-      width: 468px;
-      @include font(700, 16px, 22px, $blue-color);
-    }
-    
-    &__list-item {
-      margin-left: 15px;
-    }
-  }
-  .dipenser {
-    height: 843px;
-    flex-direction: column-reverse;
-    margin-bottom: 0px;
-    background-size: auto 625px;
-    &__right-side {
-      max-width: 328px;
-      height: 325px;
-      margin-top: 0;
-      top: -169px;
-      > img {
-        &:first-child {
-          left: 47px;
-          width: 240px;
-          height: 318px;
-        }
-        &:nth-child(2) {
-          transform: scale(53px, 23px);
-          left: unset;
-          top: 100px;
-          right: -10px;
-        }
-        &:last-child {
-          width: 89px;
-          height: 92px;
-          right: 34px;
-          // left: unset;
-          top: 169px;
-        }
-      }
-    }
-  }
-}

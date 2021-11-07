@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Mulish:wght@400;600&family=Prompt:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lato&family=Mulish:wght@400;600&family=Prompt:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -19,7 +19,7 @@
         <img src="/public/img/Frame.png" alt="" >
         <img src="/public/img/clouds.png" alt="" >
       </div>
-      <div class="hero__navbar">
+      <nav class="hero__navbar">
         <img class="logo" src="/public/img/Logo.png" alt="" />
         <button class="navbar-btn">
           <span>
@@ -27,7 +27,7 @@
           </span>
           <span>0287 3038 123</span>
         </button>
-      </div>
+      </nav>
       <div class="hero__content">
         <div class="content__first">
           <strong>Thương hiệu máy làm đá số 1 đến từ Hàn Quốc</strong>
@@ -61,7 +61,6 @@
       </div>
       <div class="hero__flexImage">
         <img src="/public/img/Hero_illustration.png" alt="hero illustration" />
-        <img src="/public/img/Ice.png" alt="ice" />
         <img src="/public/img/Ice.png" alt="ice" />
         <img src="/public/img/Ice.png" alt="ice" />
         <img src="/public/icons/scolldown.svg" alt="scoll" />
@@ -112,6 +111,9 @@
           </div>
           <button class="make-ice__btn">Tìm hiểu thêm</button>
         </div>
+      </div>
+      <div class="flex-image">
+        <img src="/public/img/Ice.png" alt="ice" />
       </div>
     </div>
     <div class="dipenser">
@@ -211,37 +213,55 @@
       </div>
     </div>
     <div class="footer">
-      <div class="footer-offers">
-        <label>Đăng ký nhận ưu đãi</label>
-        <div>
-          <form action="">
-            <input type="text" placeholder="Nhập email">
-            <button type="button" >gửi</button>
-          </form>
+      <div class="footer__info">
+        <div class="footer__info--company">
+          <div class="footer-offers">
+            <label>Đăng ký nhận ưu đãi</label>
+            <div>
+              <form action="">
+                <input type="text" placeholder="Nhập email">
+                <button type="button" >gửi</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-content">
+            <p>
+              <span>LIÊN HỆ</span>
+              <br>
+              <span>Công ty TNHH Đầu Tư Phát Triển Phương Bình</span>
+            </p>
+            <p>
+              <span>Hotline</span>
+              <span>02873038123</span>
+            </p>
+            <p>
+              <span>Email</span>
+              <span>quote@phuongbinhgroup.com.vn</span>
+            </p>
+            <p class="address">
+              <span class="address--header">Địa chỉ</span>
+              <span class="address--details">
+                <span class="address--first">142/41 Bạch Đằng, P.24, Quận Bình Thạnh, TP.HCM</span>
+                <br>
+                <span>28 Lý Nhân Tông, P.Hoà Cường Bắc, Q.Hải Châu, TP. Đà Nẵng</span>
+                <br>
+                <span>8 Phố Nghĩa Đô, P.Nghĩa Đô, Q.Cầu Giấy, Hà Nội</span>
+              </span>
+            </p>
+            <div><b>MST</b> 0312903173</div>
+          </div>
+        </div>
+        <div class="footer__info--contact">
+          <h4>THEO DÕI CHÚNG TÔI</h4>
+          <p>
+            <img src="/public/img/contact/Facebook.png" alt="" srcset="">
+            <img src="/public/img/contact/Dribble.png" alt="" srcset="">
+            <img src="/public/img/contact/Youtube.png" alt="" srcset="">
+            <img src="/public/img/contact/Instagram.png" alt="" srcset="">
+          </p>
         </div>
       </div>
-      <div class="footer-content">
-        <div><b>LIÊN HỆ</b><p>Công ty TNHH Đầu Tư Phát Triển Phương Bình</p></div>
-        <br>
-        <p><b>Hotline</b> 02873038123</p>
-        <p><b>Email</b> quote@phuongbinhgroup.com.vn</p>
-        <div class="address"><span><b>Địa chỉ</b> 142/41 Bạch Đằng, P.24, Quận Bình Thạnh, TP.HCM</span>
-            <p>28 Lý Nhân Tông, P.Hoà Cường Bắc, Q.Hải Châu, TP. Đà Nẵng</p>
-            <p>8 Phố Nghĩa Đô, P.Nghĩa Đô, Q.Cầu Giấy, Hà Nội</p>
-        </div>
-        <br>
-        <div><b>MST</b> 0312903173</div>
-      </div>
-      <div class="footer-contact">
-        <div>THEO DÕI CHÚNG TÔI</div>
-        <div>
-          <img src="/public/img/contact/Facebook.png" alt="" srcset="">
-          <img src="/public/img/contact/Dribble.png" alt="" srcset="">
-          <img src="/public/img/contact/Youtube.png" alt="" srcset="">
-          <img src="/public/img/contact/Instagram.png" alt="" srcset="">
-        </div>
-      </div>
-      <div class="footer-lisense">© 2020 Phương Bình Group. All rights reserved.</div>
+      <div class="footer__lisense">© 2020 Phương Bình Group. All rights reserved.</div>
     </div>
   </body>
 </html>

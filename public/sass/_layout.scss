@@ -16,13 +16,9 @@
         bottom: 0;
       }
     }
-    // background-image: url("/public/img/clouds.png"),
-    //   url("/public/img/Frame.png");
-    // background-position: bottom, top;
-    // background-repeat: no-repeat, no-repeat;
     z-index: -1;
   }
-  &__navbar {
+  nav {
     @include flex-img(0,0);
     max-height: 110px;
     height: 110px;
@@ -53,6 +49,7 @@
     max-width: 722px;
     color: $white-color;
     > div {
+      margin-bottom: 30px;
       &:first-child {
         @include font(700, 48px, 62px, $white-color);
       }
@@ -123,12 +120,12 @@
         height: 190px;
         width: 222px;
       }
+      // &:nth-child(4) {
+      //   @include flex-img(1248px, 1135px);
+      //   width: 142px;
+      //   height: 123px;
+      // }
       &:nth-child(4) {
-        @include flex-img(1248px, 1135px);
-        width: 142px;
-        height: 123px;
-      }
-      &:nth-child(5) {
         @include flex-img(704px, 801px);
         width: 32px;
         height: 48px;
@@ -234,6 +231,15 @@
     background-color: #4762fc;
     border: inherit;
     border-radius: 10px;
+  }
+  .flex-image {
+    img {
+      position: absolute;
+      top: -125px;
+      right: 50px;
+      width: 142px;
+      height: 123px;
+    }
   }
 }
 
@@ -519,91 +525,110 @@
   }
 }
 .footer {
-  position: relative;
   height: 701px;
+  position: relative;
   background-color: #3956FB;
   background-image: url('/public/img/background/Bg_footer.png');
-  padding: 60px 96px 54px;
-  .footer-offers {
-      label {
-        @include font(700,32px, 48.38px,  $white-color);
-        margin-bottom: 25px;
-      }
-      div {
-        position: relative;
-        width: 614px;
-        height: 60px;
-        margin-bottom: 48px;
-        input[type="text"] {
-          background-color: rgba(255,255,255,0.3);
-          @include font(400, 18px, 26px,  $white-color);
-          border: 0px solid;
-          border-radius: 9px;
-          opacity: 0.8;
-          &::placeholder {
-            color: $white-color;
+  background-position: bottom;
+  &__info {
+    height: 100%;
+    width: 100%;
+    padding: 60px 96px 54px;
+    position: relative;
+  }
+  &__info--company {
+    .footer-offers {
+        label {
+          @include font(700,32px, 48.38px,  $white-color);
+          margin-bottom: 25px;
+        }
+        > div {
+          position: relative;
+          width: 614px;
+          height: 60px;
+          margin-top: 25px;
+          margin-bottom: 48px;
+          input[type="text"] {
+            background-color: rgba(255,255,255,0.3);
+            @include font(400, 18px, 26px,  $white-color);
+            border: 0px solid;
+            border-radius: 9px;
             opacity: 0.8;
+            &::placeholder {
+              color: $white-color;
+              opacity: 0.8;
+            }
+            &:focus {
+              outline: none;
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 160px 0 10px
           }
-          &:focus {
-            outline: none;
+          button {
+            width: 151px;
+            height: 54px;
+            @include flex-img(459px, 3px);
+            border: none;
+            border-radius: 9px;
+            opacity: 1;
+            color: $btn-color;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            @include font(800, 18px, 18px,  $btn-color);
           }
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          padding: 0 160px 0 10px
-        }
-        button {
-          width: 151px;
-          height: 54px;
-          @include flex-img(459px, 3px);
-          border: none;
-          border-radius: 9px;
-          opacity: 1;
-          color: $btn-color;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          @include font(800, 18px, 18px,  $btn-color);
         }
       }
-    }
-  .footer-content {
-    font-size: 18px;
-    line-height: 26px;
-    color: $white-color;
-    .address {
-      >span {
-        b {
-          margin-right: 10px;
+    .footer-content {
+      font-size: 18px;
+      line-height: 26px;
+      color: $white-color;
+      > p {
+        margin-bottom: 30px;
+        > span {
+          &:first-child {
+            font-weight: bold;
+            margin-right: 10px;
+          }
         }
-      }
-      >p {
-        padding-left: 110px;
+        &:nth-child(4) {
+          display: flex;
+          flex-direction: row;
+          .address--details {
+            >span {
+              &:not(.address--first) {
+                  padding-left: 35px;
+                }
+              }
+          }
+        }
       }
     }
   }
-  .footer-contact {
+  &__info--contact {
     width: 225px;
-    height: 23px;
+    height: 79px;
     letter-spacing: 1px;
     text-align: center;
-    float: right;
-    // @include flex-img(1119px,487px);
-    > div {
-      &:first-child {
-        font-family: 'Mulish', sans-serif;
-        @include font(500,18px,23px,$white-color);
-      }
-      &:last-child {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
+    position: absolute;
+    right: 96px;
+    bottom: 137px;
+    h4 {
+      margin-bottom: 14px;
+      font-family: 'Mulish', sans-serif;
+      @include font(500,18px,23px,$white-color);
+    }
+    > p {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
   }
-  .footer-lisense {
+  .footer__lisense {
     width: 424px;
     height: 22px;
     @include font(normal,18px,22px,rgba(255, 255, 255, 0.5));

@@ -250,7 +250,7 @@
   position: relative;
   margin-bottom: 137px;
   background: #4762fc;
-  background-image: url("/public/img/Pattern.png");
+  background-image: url("/public/assets/img/Pattern.png");
   background-repeat: no-repeat;
   &__left-side {
     margin: 66px 12px 57px 202px;
@@ -332,7 +332,7 @@
     width: 755px;
     height: 762px;
     margin: 90px 79px 24px 0;
-    background-image: url("/public/img/flake-ice.png");
+    background-image: url("/public/assets/img/flake-ice.png");
     img {
       display: none;
       @include flex-img(623px, 467px);
@@ -394,7 +394,7 @@
 .video-make-ice {
   display: block;
   height: 626px;
-  background-image: url("/public/img/make_ice_vid.png");
+  background-image: url("/public/assets/img/make_ice_vid.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -528,7 +528,7 @@
   height: 701px;
   position: relative;
   background-color: #3956FB;
-  background-image: url('/public/img/background/Bg_footer.png');
+  background-image: url('/public/assets/img/background/Bg_footer.png');
   background-position: bottom;
   &__info {
     height: 100%;

@@ -315,6 +315,7 @@ body {
       width: 597px;
       height: 630px; }
     .dipenser__right-side > img:last-child {
+      display: none;
       left: 452px;
       top: 482px;
       position: absolute;
@@ -338,7 +339,8 @@ body {
     height: 762px;
     margin: 90px 79px 24px 0;
     background-image: url("/public/img/flake-ice.png"); }
-    .flake-ice__left-side img:last-child {
+    .flake-ice__left-side img {
+      display: none;
       left: 623px;
       top: 467px;
       position: absolute;
@@ -984,3 +986,69 @@ body {
       left: 23px;
       bottom: 32px;
       top: unset; } }
+
+.hero__flexImage .scoll-down:hover {
+  transform: scale(1.5); }
+
+.dipenser__right-side .illustration:hover + .ice-tea {
+  display: block;
+  animation: 1s ease-out move-circle-dipenser; }
+
+.flake-ice__left-side:hover > img {
+  display: block;
+  animation: 1s ease-out move-circle-flake-ice; }
+
+@media only screen and (max-width: 376px) {
+  .dipenser__right-side .illustration:hover + .ice-tea {
+    display: block;
+    animation: 1s ease-out move-circle-dipenser-mobile; }
+  .flake-ice__left-side:hover > img {
+    display: block;
+    animation: 1s ease-out move-circle-flake-ice-mobile; } }
+
+@keyframes move-circle-dipenser {
+  0% {
+    transform: scale(0);
+    top: 330px;
+    left: 452px; }
+  50% {
+    transform: scale(0.4) rotate(90deg);
+    top: 390px;
+    left: 495px; }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+
+@keyframes move-circle-flake-ice {
+  0% {
+    transform: scale(0);
+    top: 330px; }
+  50% {
+    transform: scale(0.4) rotate(90deg);
+    top: 390px;
+    left: 650px; }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+
+@keyframes move-circle-dipenser-mobile {
+  0% {
+    transform: scale(0);
+    top: 140px;
+    right: 16px; }
+  50% {
+    transform: scale(0.4) rotate(90deg);
+    top: 177px;
+    right: -10px; }
+  100% {
+    transform: scale(1) rotate(360deg); } }
+
+@keyframes move-circle-flake-ice-mobile {
+  0% {
+    transform: scale(0);
+    top: 100px;
+    left: 210px; }
+  50% {
+    transform: scale(0.4) rotate(90deg);
+    top: 135px;
+    left: 260px; }
+  100% {
+    transform: scale(0.6) rotate(360deg); } }

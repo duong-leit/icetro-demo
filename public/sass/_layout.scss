@@ -309,6 +309,7 @@
         height: 630px;
       }
       &:last-child {
+        display: none;
         @include flex-img(452px, 482px);
         border: 10px solid $white-color;
         border-radius: 50%;
@@ -333,11 +334,10 @@
     margin: 90px 79px 24px 0;
     background-image: url("/public/img/flake-ice.png");
     img {
-      &:last-child {
-        @include flex-img(623px, 467px);
-        border: 10px solid $white-color;
-        border-radius: 50%;
-      }
+      display: none;
+      @include flex-img(623px, 467px);
+      border: 10px solid $white-color;
+      border-radius: 50%;
     }
   }
   &__right-side {
